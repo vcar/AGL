@@ -1,0 +1,145 @@
+body{
+	background:url('/images/bg.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: 100% 100%;
+	height:100%;
+	margin:0px;
+}
+.align-dv{
+	color:white;
+	font-weight:bold;
+}
+#img-driver{
+	border-radius:80px;
+	height:50px;
+	width:50px;
+	border:3px solid white;
+}
+#driver-name{
+	color:white;
+	font-weight:bold;
+	font-size:16pt;
+}
+#centenue{
+	
+	width:100%;
+	height:300px;
+	margin-top:50px;
+}
+.cyrcle-dv{
+	background-color: rgba(7, 37, 51, 0.3);
+	width:180px;
+	height:180px;
+	border-radius:90px;
+
+}
+.cent-dv{
+	font-weight:bold;
+	font-size:16pt;
+	color:white;
+}
+.cent-dv1{
+	font-weight:bold;
+	font-size:10pt;
+	color:white;
+}
+.cent-dv2{
+	font-weight:bold;
+	font-size:10pt;
+	color:white;
+	text-align:left;
+	margin-top:5px;
+}
+.line-wid{
+	background-color:white;
+	width:200px;
+	height:1px;
+}
+.img-icon{
+	margin-top:30px;
+	width:120px;
+	height:120px;
+}
+.tb-inline{
+	display:inline;
+	margin-left:110px;
+}
+.tb-inline,.tb-inline1{
+	display:inline;
+}
+.cut-dv{
+	background-color: rgba(255, 255, 255, 0.5);
+	width:2px;
+	height:140px;
+	margin-left:60px;
+}
+.dv-bg-centenu{
+	background:url('/images/contenu-bg.png');
+	background-repeat: no-repeat;
+    background-size: 295px 355px;
+	width:260px;
+	height:255px;
+	margin-top:-3px;
+	overflow-y:auto;
+}
+#button_dv{
+	background-color:rgba(255, 255, 255, 0.4);
+	width:100px;
+	padding:20px;
+	text-align:center;
+}
+#button_dv:hover{
+	cursor:pointer;
+	color:#055060;
+	background-color:rgba(255, 255, 255, 0.9);
+}
+#ul_id{
+	display:none;
+	position:absolute;
+	background-color:rgba(255, 255, 255, 0.9);
+	width:200px;
+	margin: 0;
+    padding: 0;
+	color:#055060;
+	list-style-type:none;
+}
+#ul_id li{
+	margin-bottom:10px;
+	padding:10px;
+	padding-right:0px;
+	width:100%;
+}
+#ul_id li:hover{
+	background-color:rgba(166, 166, 166, 0.9);
+	color:#055060;
+	cursor:pointer;
+}
+#backto{
+	position:fixed;
+	top: 40%;
+	left: 20px;
+	background-image:url('/images/back.png');
+	width:61px;
+	height:227px;
+	opacity:0.3;
+	display:none;
+}
+#backto:hover,#nextto:hover{
+	opacity:1;
+	cursor:pointer;
+	
+}
+#nextto{
+	position:fixed;
+	top: 40%;
+	left: 93%;
+	background-image:url('/images/next.png');
+	width:61px;
+	height:227px;
+	opacity:0.3;
+	display:none;
+}
+
+
+

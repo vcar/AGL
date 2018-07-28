@@ -1,0 +1,15 @@
+
+
+/* used in navbar to show/hide items depending on connection status */
+.not-connected .if-connecting    { display: none; }
+.not-connected .if-connected     { display: none; }
+.not-connected .if-started       { display: none; }
+.connecting    .if-not-connected { display: none; }
+.connecting    .if-connected     { display: none; }
+.connecting    .if-started       { display: none; }
+.connected     .if-not-connected { display: none; }
+.connected     .if-connecting    { display: none; }
+.connected     .if-started       { display: none; }
+.started       .if-not-connected { display: none; }
+.started       .if-connecting    { display: none; }
+.started       .if-connected     { display: none; }

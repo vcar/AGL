@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="@@APPNAME@@" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="@@APPNAME@@" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="@@APPNAME@@" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="@@APPNAME@@" class="no-js"> <!--<![endif]-->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>OpenXC trace player</title>
+	<base href="@@URLBASE@@">
+    <!-- bower:css -->
+    <!-- endinject -->
+    <!-- vendor:css -->
+    <!-- endinject -->
+    <!-- appli:css -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- endinject -->
+	<!-- bower:js -->
+	<!-- endinject -->
+	<!-- inject:js -->
+	<!-- endinject -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles/ts.scss">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+   <script type="text/javascript">
+function hide (){
+$("#cont1").hide(200);
+$("#tb_load").hide(200);
+$("#cont2").show(500).slideDown(1000);
+$("#cont2").show(500).slideDown(1000);
+$("#tb_55").show(500).slideDown(1000);
+$("#backto").show(500).slideDown(1000);
+
+}
+function show_ul (){
+$("#ul_id").show(500).slideDown(1000);
+}
+
+function hide_ul (){
+$("#ul_id").hide(500).slideUp(1000);
+}
+
+function buttBack (){
+$("#cont2").hide(200);
+$("#backto").hide(200);
+$("#cont1").show(500).slideDown(1000);
+$("#nextto").show(500).slideDown(1000);
+}
+
+function buttNext (){
+$("#cont1").hide(200);
+$("#nextto").hide(200);
+$("#cont2").show(500).slideDown(1000);
+$("#backto").show(500).slideDown(1000);
+}
+
+
+</script>
+
+
+</head>
+<body class="not-connected">
+
+<!------------Back--------------->
+<div id="backto" onclick="buttBack()">
+
+</div>
+<!------------Next--------------->
+<div id="nextto" onclick="buttNext()">
+
+</div>
+<!-------------------------------->
+<table border="0" cellspacing="0" cellpadding="0" width="100%" align="center">
+ <tr height="70px" bgcolor="#072533" style="background-color: rgba(7, 37, 51, 0.3);">
+  <td align="left" width="30%">
+  <span  onmouseleave="hide_ul()">
+	<div align="left" class="align-dv" style="margin-left:30px">
+		<div id="button_dv" onmouseover="show_ul()">
+			Select trip
+		</div>
+		<ul id="ul_id">
+			<li onclick="startCount() doStart('data/trace1.json');">trace1</li>
+			<li onclick="startCount() doStart('data/trace2.json');">trace2</li>
+			<li onclick="startCount() doStart('data/trace3.json');">trace3</li>
+		</ul>
+		
+	</div>
+  </span>
+	</td>
+	<td align="center">
+	<div align="center" class="align-dv">
+		21:21
+	</div>
+	</td>
+	<td align="right" width="30%">
+	<div align="right" class="align-dv" style="margin-right:30px">
+		Connected
+	</div>
+  </td>
+ </tr>
+ <tr>
+  <td align="left" colspan="3">
+  <br> <br>
+	<table border="0" style="margin-left:20px;display:none;" id="tb_55">
+		<tr>
+		 <td rowspan="2">
+			<img src="/images/images.png" id="img-driver">
+		 </td>
+		 <td>
+			<div id="driver-name"> Adam</div>
+		 </td>
+		</tr>
+		<tr>
+		 <td>
+			<font color="white">Driver is identified and connected</font>
+		 </td>
+		</tr>
+	</table>
+	<!--------------Identification--------------------->
+	<table border="0" align="center" id="tb_load" style="display:none;">
+		<tr>
+		 <td>
+			<div id="driver-name"> No driver identified yet </div>
+		 </td>
+		</tr>
+		<tr>
+		 <td>
+			<font color="white">Driver identification in progress .....</font>
+		 </td>
+		</tr>
+		<tr>
+		 <td>
+			<img src="/images/load.gif">
+		 </td>
+		</tr>
+	</table>
+  </td>
+ </tr>
+ <!--------------contenue page 1---------------------->
+ <tr id="cont1">
+  <td align="left" colspan="3">
+  <br> <br>
+	<div id="centenue">
+	 <!-------------------------1--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/gasleve.png" class="img-icon">
+			</div>
+		  </td>
+		  <td colspan="2">
+			<div class="cut-dv"> </div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				196 milles
+			</div>
+			<div class="cent-dv1">
+				Distance to empty
+			</div>
+		  </td>
+		  <td>
+			&nbsp;
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+		<!-------------------------2--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/snowflake.png" class="img-icon">
+			</div>
+		  </td>
+		  <td colspan="2">
+			<div class="cut-dv"> </div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				23°F
+			</div>
+			<div class="cent-dv1">
+				Air Conditioning
+			</div>
+		  </td>
+		  <td>
+			&nbsp;
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+		<!-------------------------3--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/lock.png" class="img-icon">
+			</div>
+		  </td>
+		  <td colspan="2">
+			<div class="cut-dv"> </div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				Locked
+			</div>
+			<div class="cent-dv1">
+				Doors and Windows
+			</div>
+		  </td>
+		  <td>
+			&nbsp;
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+		<!-------------------------4--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/navigation.png" class="img-icon">
+			</div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				Navigation
+			</div>
+			<div class="cent-dv1">
+				Gps Navigation Service
+			</div>
+		  </td>
+		 </tr>
+		</table>
+	</div>
+  </td>
+ </tr>
+ <!--------------contenue page 2---------------------->
+ <tr id="cont2" style="display:none">
+  <td align="center" colspan="3">
+  <br> <br>
+	<div id="centenue">
+	 <!-------------------------1--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline" style="margin-left:0px">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/destin.png" class="img-icon">
+			</div>
+		  </td>
+		  <td colspan="2">
+			<div class="cut-dv"> </div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				Favourite destinations
+			</div>
+	<div class="dv-bg-centenu">
+		<ul style="list-style-type: none;">
+			<li>
+			 <div class="cent-dv2">
+				University Sidi Mohammed Ben Abdellah
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			 
+			<li>
+			 <div class="cent-dv2">
+				Supermarket 
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				Mosque
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				Home
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+
+		
+	
+		</ul>
+	</div>
+		  </td>
+		  <td>
+			&nbsp;
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+		<!-------------------------2--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/music.png" class="img-icon">
+			</div>
+		  </td>
+		  <td colspan="2">
+			<div class="cut-dv"> </div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				Favourite music
+			</div>
+	<div class="dv-bg-centenu">
+		<ul style="list-style-type: none;">
+			<li>
+			 <div class="cent-dv2">
+				Nice For What
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			 
+			<li>
+			 <div class="cent-dv2">
+				This Is America
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				The Middle
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				Yes Indeed
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+		</ul>
+	</div>
+		  </td>
+		  <td>
+			&nbsp;
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+		<!-------------------------3--------------------------->
+		
+		<table border="0" width="250px" height="300px" class="tb-inline">
+		 <tr>
+		  <td align="center">
+			<div class="cyrcle-dv">
+				<img src="/images/contact.png" class="img-icon">
+			</div>
+		  </td>
+		 </tr>
+		 <tr>
+		  <td valign="top" align="center" colspan="2">
+			<div class="cent-dv">
+				Contacts
+			</div>
+	<div class="dv-bg-centenu">
+		<ul style="list-style-type: none;">
+			<li>
+			 <div class="cent-dv2">
+				Mike Smith
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			 
+			<li>
+			 <div class="cent-dv2">
+				Greg Smith
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				Napoli Pizza
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+			<li>
+			 <div class="cent-dv2">
+				Aerepas Cafe
+			 </div>
+			 <div class="line-wid"> </div>   <!---------add-line-------->
+			</li>
+		</ul>
+	</div>
+		  </td>
+		 </tr>
+		</table>
+		<!-------------->
+	</div>
+  </td>
+ </tr>
+ </table>
+
+</body>
+</html>
