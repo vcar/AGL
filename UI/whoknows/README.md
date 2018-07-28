@@ -11,3 +11,4 @@ Run:
 ```
 
 
+The project was based on the openXC trace player : https://github.com/iotbzh/txc-demo
